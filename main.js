@@ -4,9 +4,13 @@
  * Visit http://adobexdplatform.com/ for API docs and more sample code.
  */
 
+
+// Require in dependencies
 const { Text } = require("scenegraph");
 const { alert } = require("./lib/dialogs.js");
 const application = require("application");
+
+// Define strings for localization
 const uiStrings = {
     en: {
         heading: "Select a text object",
@@ -18,23 +22,22 @@ const uiStrings = {
     }
 }
 
+// Main command
 function tategakiShiyo(selection) {
-    const language = application.appLanguage;
-    console.log(language);
-
-    // Go to Plugins > Development > Developer Console to see this log output
+    
+    // If selection is text
     if (selection.items[0] instanceof Text) {
+        // Convert to vertical string
         const textObj = selection.items[0];
         textObj.text = textObj.text.split("").join("\n");
     }
     else {
-        showAlert(language);
+        showAlert(application.appLanguage);
     }
 }
 
+// Show an alert with localized strings
 async function showAlert(language) {
-    /* we'll display a dialog here */
-
     await alert(uiStrings[language].heading, uiStrings[language].body);
 }
 
