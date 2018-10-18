@@ -4,22 +4,28 @@
  * Visit http://adobexdplatform.com/ for API docs and more sample code.
  */
 
-var {Rectangle, Color} = require("scenegraph");
+const {Text} = require("scenegraph");
+const { alert, error } = require("./lib/dialogs.js");
 
-function myPluginCommand(selection) {
+function tategakiShiyo(selection) {
     // Go to Plugins > Development > Developer Console to see this log output
-    console.log("Plugin command is running!");
+    if (selection.items[0] instanceof Text) {
+        const textObj = selection.items[0];
+        textObj.text = textObj.text.split("").join("\n");
+    }
+    else {
+        showAlert();
+    }
+}
 
-    // Insert a red square at (0, 0) in the current artboard or group/container
-    var shape = new Rectangle();
-    shape.width = 100;
-    shape.height = 100;
-    shape.fill = new Color("#f00");
-    selection.insertionParent.addChild(shape);
+async function showAlert() {
+	/* we'll display a dialog here */
+    await alert("Select a text object",
+        "You'll need to selet a text object to create vertical writing.");
 }
 
 module.exports = {
     commands: {
-        myPluginCommand: myPluginCommand
+        myPluginCommand: tategakiShiyo
     }
 };
