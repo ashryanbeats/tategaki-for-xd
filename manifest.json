@@ -2,7 +2,7 @@
    "name": "Tategaki",
    "id": "1d74c02e",
    "version":"1.0.0",
-   "description":"Sample plugin for Adobe XD, providing starter project scaffolding.",
+   "description":"A very simple plugin for Adobe XD that turns horizontal text into vertical text using line breaks after each character.",
    "icons":[
       {
          "width":96,
