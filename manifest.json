@@ -1,0 +1,24 @@
+{
+   "name": "Tategaki",
+   "id": "1d74c02e",
+   "version":"1.0.0",
+   "description":"Sample plugin for Adobe XD, providing starter project scaffolding.",
+   "icons":[
+      {
+         "width":96,
+         "height":96,
+         "path":"images/icon.png"
+      }
+   ],
+   "host":{
+      "app":"XD",
+      "minVersion":"13.0.0"
+   },
+   "uiEntryPoints":[
+      {
+         "type":"menu",
+         "label":"My Plugin",
+         "commandId":"myPluginCommand"
+      }
+   ]
+}
