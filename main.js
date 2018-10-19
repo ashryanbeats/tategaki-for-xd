@@ -44,13 +44,16 @@ function tategakiShiyo(selection) {
         // Convert to vertical string
         const textObj = selection.items[0];
         
+        // If it's vertical, alert the user and exit
         if (isTategaki(textObj.text)) {
             showAlert(language, "alreadyRan");
         }
+        // Else, make the text vertical
         else {
            textObj.text = textObj.text.split("").join("\n");
         }
     }
+    // Else, alert the user and exit
     else {
         showAlert(language, "selectionError");
     }
@@ -61,6 +64,7 @@ async function showAlert(language, flag) {
     await alert(uiStrings[language][flag].heading, uiStrings[language][flag].body);
 }
 
+// Detect if the text is already vertical
 function isTategaki(text) {
     return text.split("\n").length >= text.length / 2; 
 }
