@@ -24,13 +24,13 @@ const uiStrings = {
     },
     ja: {
         selectionError: {
-            heading: "テキストを選択してください。",
-            body: "縦書きに変えるためにテキストを選択する必要があります。"
-            
+            heading: "縦書きにしたいテキストを選択しましょう。",
+            body: "テキストがひとつも選択されていません。縦書きに変えるためにテキストを選択する必要があります。"
+
         },
         alreadyRan: {
-            heading: "縦書きのテキストを選択した",
-            body: "選択したテキストは既に縦書きになっていそうです。横書きのテキストを選択してください。"
+            heading: "横書きのテキストを選択しましょう。",
+            body: "選択したテキストはすでに縦書きになっているようです。横書きのテキストを選択する必要があります。"
         }
     }
 }
@@ -43,7 +43,7 @@ function tategakiShiyo(selection) {
     if (selection.items[0] instanceof Text) {
         // Convert to vertical string
         const textObj = selection.items[0];
-        
+
         // If it's vertical, alert the user and exit
         if (isTategaki(textObj.text)) {
             showAlert(language, "alreadyRan");
@@ -66,7 +66,7 @@ async function showAlert(language, flag) {
 
 // Detect if the text is already vertical
 function isTategaki(text) {
-    return text.split("\n").length >= text.length / 2; 
+    return text.split("\n").length >= text.length / 2;
 }
 
 module.exports = {
