@@ -1,27 +1,45 @@
 {
-   "name": "Tategaki",
-   "id": "1d74c02e",
-   "version":"1.0.0",
-   "description":"A very simple plugin for Adobe XD that turns horizontal text into vertical text using line breaks after each character.",
-   "icons":[
-      {
-         "width":96,
-         "height":96,
-         "path":"images/icon@2x.png"
-      }
-   ],
-   "host":{
-      "app":"XD",
-      "minVersion":"13.0.0"
-   },
-   "uiEntryPoints":[
-      {
-         "type":"menu",
-         "label":{
-            "default": "Make text vertical",
-            "ja": "テキストを縦書きにする"
-        },
-         "commandId":"myPluginCommand"
-      }
-   ]
+  "name": "Tategaki",
+  "id": "1d74c02e",
+  "version": "1.0.0",
+  "summary": "Turn horizontal text vertical",
+  "description": "A very simple plugin for Adobe XD that turns horizontal text into vertical text using line breaks after each character.",
+  "author": "Ash Ryan Arnwine",
+  "icons": [
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@48.png"
+    },
+    {
+      "width": 96,
+      "height": 96,
+      "path": "images/icon@96.png"
+    },
+    {
+      "width": 144,
+      "height": 144,
+      "path": "images/icon@144.png"
+    },
+    {
+      "width": 192,
+      "height": 192,
+      "path": "images/icon@192.png"
+    }
+  ],
+  "host": {
+    "app": "XD",
+    "minVersion": "13.0"
+  },
+  "languages": ["en", "ja"],
+  "uiEntryPoints": [
+    {
+      "type": "menu",
+      "label": {
+        "default": "Make text vertical",
+        "ja": "テキストを縦書きにする"
+      },
+      "commandId": "myPluginCommand"
+    }
+  ]
 }

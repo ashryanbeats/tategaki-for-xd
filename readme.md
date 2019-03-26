@@ -1,6 +1,8 @@
-# Takegaki for Adobe XD
+# Tategaki for Adobe XD
 
 ![](images/icon@2x.png)
+
+> たてがき 【縦書き】, tah-teh-gah-kee: vertical writing
 
 A very simple plugin for Adobe XD that turns horizontal text into vertical text using line breaks after each character.
 
