@@ -1,6 +1,6 @@
 {
   "name": "Tategaki",
-  "id": "1d74c02e",
+  "id": "YOUR_PLUGIN_ID_HERE",
   "version": "1.0.0",
   "summary": "Turn horizontal text vertical",
   "description": "A very simple plugin for Adobe XD that turns horizontal text into vertical text using line breaks after each character.",
